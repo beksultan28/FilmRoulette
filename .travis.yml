@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=0ce2dc49865027861cbaaff064a255fa9f5fbb299a106378258103b0cedf35a8
 language: node_js
 sudo: false
 node_js:
@@ -7,7 +10,14 @@ cache:
   yarn: true
   directories:
     - node_modules
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 install:
   - yarn
 script:
-  - yarn build-with-test 
+  - yarn build
+  - yarn build test -- --coverage
+after_script:
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
