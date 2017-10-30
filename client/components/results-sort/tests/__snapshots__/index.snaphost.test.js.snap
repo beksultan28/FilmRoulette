@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsSortComponent renders correctly 1`] = `
+<div
+  className="results-sort"
+>
+  <div
+    className="container wrapper"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-6 results-sort-title"
+      >
+        Test title
+      </div>
+      <div
+        className="col-xs-6 text-right"
+      >
+        Sort by
+        <a
+          className="active"
+          data-value="release_date"
+          href="#!"
+          onClick={[Function]}
+        >
+          release date
+        </a>
+        <a
+          className=""
+          data-value="vote_average"
+          href="#!"
+          onClick={[Function]}
+        >
+          rating
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

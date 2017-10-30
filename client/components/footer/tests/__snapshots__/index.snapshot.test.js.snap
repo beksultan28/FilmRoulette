@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterComponent renders correctly 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="logo"
+      href="/"
+      onClick={[Function]}
+    >
+      FilmRoulette
+    </a>
+  </div>
+</div>
+`;

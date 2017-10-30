@@ -1,0 +1,39 @@
+.result-item {
+	padding: 20px;
+}
+
+a.result-content {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+}
+
+.result-img {
+	width: 100%;
+	height: 470px;
+	background: #ccc;
+}
+
+.result-img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.result-title {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 1;
+	padding: 1rem 0 2px;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 7px;
+}
+
+.result-title .label {
+	position: absolute;
+	right: 0;
+	top: 1rem;
+}

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsItemComponent renders correctl 1`] = `
+<div
+  className="result-item"
+>
+  <a
+    className="result-content"
+    href="/film/movie/1"
+    onClick={[Function]}
+  >
+    <div
+      className="result-img"
+    >
+      <img
+        alt=""
+        src="http://image.tmdb.org/t/p/w342undefined"
+      />
+    </div>
+    <div
+      className="result-title"
+    >
+      Test movie
+    </div>
+    <div
+      className="clearfix"
+    >
+      <small
+        className="label label-default pull-left"
+      >
+        IMDB: 
+        5
+      </small>
+      <span
+        className="label label-default pull-right"
+      >
+        2017-01-01
+      </span>
+    </div>
+  </a>
+</div>
+`;

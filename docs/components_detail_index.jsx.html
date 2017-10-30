@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/detail/index.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/detail/index.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
+
+// eslint-disable-next-line no-unused-vars
+import * as styles from './style.css';
+
+/**
+ * Shows film details
+ * Performs search for recommendations
+ * 
+ * @export
+ * @class DetailComponent
+ * @extends {Component}
+ */
+export default class DetailComponent extends Component {
+  componentWillMount() {
+    /**
+     * Parse url and get film
+     */
+    this.getFilm();
+  }
+
+  componentDidUpdate(prevProps) {
+    /**
+     * If film changed
+     * search for recommendations
+     */
+    if (prevProps.detailItem !== this.props.detailItem) {
+      const { id, searchBy } = this.props.match.params;
+      this.props.getRecommendations(id, searchBy);
+    }
+
+    /**
+     * If url changed
+     * Parse url and get film
+     * This needed for the case when user navigated through browser histor
+     */
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.getFilm();
+    }
+  }
+
+  /**
+   * Parses url and updates state
+   * then performs search for film details with new states
+   * 
+   * @memberof DetailComponent
+   */
+  getFilm() {
+    const { id, searchBy } = this.props.match.params;
+    this.props.updateSearchBy(searchBy);
+    this.props.getFilmById(id, searchBy);
+  }
+
+  /**
+   * Converts genres array to the string
+   * 
+   * @param {Array} genres 
+   * @returns {String}
+   * @memberof DetailComponent
+   */
+  getCategoryList(genres) {
+    if (!genres) {
+      return '';
+    }
+    return genres.map(i => i.name).join(', ');
+  }
+
+  /**
+   * Generates runtime string
+   * 
+   * @param {Object} item 
+   * @returns {String}
+   * @memberof DetailComponent
+   */
+  getRuntime(item) {
+    if (item.runtime) {
+      return `${item.runtime} min`;
+    }
+    if (item.number_of_episodes) {
+      return `${item.number_of_episodes} episodes`;
+    }
+    return '';
+  }
+
+  render() {
+    const item = this.props.detailItem;
+    return item ? (
+      &lt;div className="detail">
+        &lt;div className="row">
+          &lt;div className="col-xs-4">
+            &lt;img src={`http://image.tmdb.org/t/p/w342${item.poster_path}`} alt="" className="detail-img" />
+          &lt;/div>
+          &lt;div className="col-xs-7">
+            &lt;h2 className="detail-title">
+              {item.title}
+              &amp;nbsp;&lt;span className="badge">{item.vote_average} &lt;/span>
+            &lt;/h2>
+            &lt;h3 className="detail-category">{this.getCategoryList(item.genres)}&lt;/h3>
+            &lt;div className="row detail-numbers">
+              &lt;div className="col-md-3">
+                &lt;b>{item.release_date}&lt;/b>
+              &lt;/div>
+              &lt;div className="col-md-5">
+                {this.getRuntime(item)}
+              &lt;/div>
+            &lt;/div>
+            &lt;div className="detail-description">
+              {item.overview}
+            &lt;/div>
+            &lt;div className="detail-extra">
+              &lt;a href={item.homepage} target="_blank">{item.homepage}&lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    ) : null;
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DetailComponent.html">DetailComponent</a></li><li><a href="ResultsListComponent.html">ResultsListComponent</a></li><li><a href="ResultsSortComponent.html">ResultsSortComponent</a></li><li><a href="SearchFormComponent.html">SearchFormComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#apiKey">apiKey</a></li><li><a href="global.html#detailItem">detailItem</a></li><li><a href="global.html#expectedResult">expectedResult</a></li><li><a href="global.html#expectedResults">expectedResults</a></li><li><a href="global.html#FooterComponent">FooterComponent</a></li><li><a href="global.html#getFilmApi">getFilmApi</a></li><li><a href="global.html#getFilmById">getFilmById</a></li><li><a href="global.html#getRecommendations">getRecommendations</a></li><li><a href="global.html#getRecommendationsApi">getRecommendationsApi</a></li><li><a href="global.html#recieveFilmById">recieveFilmById</a></li><li><a href="global.html#recieveFilms">recieveFilms</a></li><li><a href="global.html#ResultsItemComponent">ResultsItemComponent</a></li><li><a href="global.html#searchApi">searchApi</a></li><li><a href="global.html#searchBy">searchBy</a></li><li><a href="global.html#searchFilms">searchFilms</a></li><li><a href="global.html#searchResults">searchResults</a></li><li><a href="global.html#sortBy">sortBy</a></li><li><a href="global.html#sortFilms">sortFilms</a></li><li><a href="global.html#updateQuery">updateQuery</a></li><li><a href="global.html#updateSearchBy">updateSearchBy</a></li><li><a href="global.html#updateSortBy">updateSortBy</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Oct 28 2017 22:06:51 GMT+0600 (Central Asia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

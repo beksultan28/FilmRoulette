@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFormComponent renders correctly 1`] = `
+<form
+  className="search-form"
+  onSubmit={undefined}
+>
+  <h2
+    className="search-title"
+  >
+    Find your movie
+  </h2>
+  <Field
+    className="search-query"
+    component="input"
+    name="searchQuery"
+    placeholder="Type there movie title or director"
+    type="text"
+  />
+  <div
+    className="clearfix"
+  >
+    <div
+      className="search-fields"
+    >
+      <span>
+        Search 
+      </span>
+      <span>
+        <input
+          checked={true}
+          id="ch-movie"
+          name="searchBy"
+          onChange={[Function]}
+          type="radio"
+          value="movie"
+        />
+        <label
+          htmlFor="ch-movie"
+        >
+           movie 
+        </label>
+      </span>
+      <span>
+        <input
+          checked={false}
+          id="ch-tv"
+          name="searchBy"
+          onChange={[Function]}
+          type="radio"
+          value="tv"
+        />
+        <label
+          htmlFor="ch-tv"
+        >
+           tv 
+        </label>
+      </span>
+    </div>
+    <button
+      className="btn btn-red search-button"
+      type="submit"
+    >
+      search
+    </button>
+  </div>
+</form>
+`;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailComponent renders correctly 1`] = `
+<div
+  className="detail"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xs-4"
+    >
+      <img
+        alt=""
+        className="detail-img"
+        src="http://image.tmdb.org/t/p/w342poster.jpg"
+      />
+    </div>
+    <div
+      className="col-xs-7"
+    >
+      <h2
+        className="detail-title"
+      >
+        Test movie
+         
+        <span
+          className="badge"
+        >
+          5
+           
+        </span>
+      </h2>
+      <h3
+        className="detail-category"
+      >
+        genre1, genre2
+      </h3>
+      <div
+        className="row detail-numbers"
+      >
+        <div
+          className="col-md-3"
+        >
+          <b>
+            2017-01-01
+          </b>
+        </div>
+        <div
+          className="col-md-5"
+        >
+          100 min
+        </div>
+      </div>
+      <div
+        className="detail-description"
+      >
+        Overview text
+      </div>
+      <div
+        className="detail-extra"
+      >
+        <a
+          href="site.com"
+          target="_blank"
+        >
+          site.com
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

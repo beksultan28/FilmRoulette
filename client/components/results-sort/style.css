@@ -1,0 +1,17 @@
+.results-sort {
+	background: #eee;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px;
+}
+
+.results-sort a {
+	color: inherit;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.results-sort a.active {
+	color: #f00;
+	text-decoration: none!important;
+}

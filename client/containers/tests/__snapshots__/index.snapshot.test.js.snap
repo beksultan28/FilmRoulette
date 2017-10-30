@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailContainer renders correctly 1`] = `
+<div
+  className="page-content"
+>
+  <div
+    className="detail-block"
+  >
+    <div
+      className="header"
+    >
+      <div
+        className="container wrapper"
+      >
+        <Link
+          className="logo"
+          replace={false}
+          to="/"
+        >
+          FilmRoulette
+        </Link>
+        <div
+          className="pull-right"
+        >
+          <Link
+            className="btn btn-light go-home"
+            replace={false}
+            to="/search"
+          >
+            Search
+          </Link>
+        </div>
+        <withRouter(Connect(DetailComponent)) />
+      </div>
+    </div>
+    <div
+      className="search-results"
+    >
+      <Connect(ResultsListComponent)
+        title="detail"
+      />
+    </div>
+  </div>
+  <FooterComponent />
+</div>
+`;
+
+exports[`SearchContainer renders correctly 1`] = `
+<div
+  className="page-content"
+>
+  <div
+    className="search-block"
+  >
+    <div
+      className="header"
+    >
+      <div
+        className="container wrapper"
+      >
+        <Link
+          className="logo"
+          replace={false}
+          to="/"
+        >
+          FilmRoulette
+        </Link>
+        <withRouter(Connect(ReduxForm)) />
+      </div>
+    </div>
+    <div
+      className="search-results"
+    >
+      <Connect(ResultsListComponent)
+        title="count"
+      />
+    </div>
+  </div>
+  <FooterComponent />
+</div>
+`;
