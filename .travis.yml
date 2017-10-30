@@ -18,6 +18,6 @@ install:
   - yarn
 script:
   - yarn build
-  - yarn build test -- --coverage
+  - yarn test -- --coverage
 after_script:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
