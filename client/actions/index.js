@@ -65,6 +65,23 @@ export const updateQuery = query => (
 );
 
 /**
+ * TV Shows don`t have title and release_date fields
+ * So we dublicate name and first_air_date fields instead
+ * This is for further simpler usage
+ * 
+ * @param {Array} data 
+ */
+const dublicateKeysForTV = data => (
+  data.map((item) => {
+    // eslint-disable-next-line prefer-const
+    let film = item;
+    film.title = item.name;
+    film.release_date = item.first_air_date;
+    return film;
+  })
+);
+
+/**
  * Sorts given data by given criteria
  * and returns recieveFilms call result
  * 
@@ -109,13 +126,7 @@ export const searchFilms = (searchQuery, searchBy, sortBy) => {
        * Adding some new keys
        */
       if (searchBy === 'tv') {
-        data = data.map((item) => {
-          // eslint-disable-next-line prefer-const
-          let film = item;
-          film.title = item.name;
-          film.release_date = item.first_air_date;
-          return film;
-        });
+        data = dublicateKeysForTV(data);
       }
       return sortFilms(data, sortBy);
     })
@@ -143,13 +154,7 @@ export const getRecommendations = (id, searchBy) => {
        * Adding some new keys
        */
       if (searchBy === 'tv') {
-        data = data.map((item) => {
-          // eslint-disable-next-line prefer-const
-          let film = item;
-          film.title = item.name;
-          film.release_date = item.first_air_date;
-          return film;
-        });
+        data = dublicateKeysForTV(data);
       }
       return sortFilms(data);
     })
