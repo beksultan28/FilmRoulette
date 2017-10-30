@@ -1,5 +1,7 @@
 # FilmRoulette
 
+[![Build Status](https://travis-ci.org/beksultan28/FilmRoulette.svg?branch=master)](https://travis-ci.org/beksultan28/FilmRoulette)
+
 Simple SPA for searching Films and TV Shows on [The Movie Database (TMDb)](https://www.themoviedb.org/).
 
 ## Getting Started
@@ -58,4 +60,4 @@ $ yarn docs #result will be generated to the 'docs' folder
 
 ## License
 
-This project is [MIT licensed](LICENCE)
+This project is [MIT licensed](LICENSE)
