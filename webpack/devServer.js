@@ -5,6 +5,6 @@ module.exports = {
     },
     hot: true,
     port: 3030,
-    contentBase: 'client',
+    contentBase: 'src',
   },
 };

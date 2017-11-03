@@ -12,7 +12,7 @@ const staticFiles = require('./webpack/staticFiles.js');
 let common = {
   entry: {
     app: [
-      './client/index.jsx',
+      './src/index.jsx',
     ],
   },
 
@@ -62,7 +62,7 @@ let common = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: './client/index.html',
+      template: './src/index.html',
       filename: 'index.html',
       inject: 'body',
     }),

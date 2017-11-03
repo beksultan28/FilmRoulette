@@ -9,6 +9,6 @@ module.exports = {
   ],
   testRegex: '\\.test\\.js$',
   roots: [
-    'client',
+    'src',
   ],
 };
