@@ -1,3 +1,5 @@
+/** @module containers */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,6 +7,9 @@ import { ConnectedDetail, ConnectedResultsList } from '../connectors';
 import FooterComponent from '../components/footer/index.jsx';
 
 
+/**
+ * DetailContainer component
+ */
 const DetailContainer = () => (
   <div className="page-content">
     <div className="detail-block">

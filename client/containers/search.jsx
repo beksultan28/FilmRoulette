@@ -1,3 +1,5 @@
+/** @module containers */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,6 +7,9 @@ import { ConnectedSearchForm, ConnectedResultsList } from '../connectors';
 import FooterComponent from '../components/footer/index.jsx';
 
 
+/**
+ * SearchContainer component
+ */
 const SearchContainer = () => (
   <div className="page-content">
     <div className="search-block">

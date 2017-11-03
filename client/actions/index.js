@@ -1,12 +1,30 @@
+/** @module actions */
+
 import { change } from 'redux-form';
 import { searchApi, getFilmApi, getRecommendationsApi } from '../helpers/searchApi.jsx';
 
-/**
- * Action constants
+/** 
+ * @constant 
+ * @type {String}
  */
 export const RECIEVE_FILMS = 'RECIEVE_FILMS';
+
+/** 
+ * @constant 
+ * @type {String}
+ */
 export const RECIEVE_FILM_DETAIL = 'RECIEVE_FILM_DETAIL';
+
+/** 
+ * @constant 
+ * @type {String}
+ */
 export const UPDATE_SORT_BY = 'UPDATE_SORT_BY';
+
+/** 
+ * @constant 
+ * @type {String}
+ */
 export const UPDATE_SEARCH_BY = 'UPDATE_SEARCH_BY';
 
 /**
@@ -69,7 +87,8 @@ export const updateQuery = query => (
  * So we dublicate name and first_air_date fields instead
  * This is for further simpler usage
  * 
- * @param {Array} data 
+ * @param {Array} data
+ * @returns {Array}
  */
 const dublicateKeysForTV = data => (
   data.map((item) => {

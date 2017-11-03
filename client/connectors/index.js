@@ -1,3 +1,5 @@
+/** @module connectors */
+
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { reduxForm } from 'redux-form';
@@ -32,6 +34,14 @@ const SearchFormRedux = reduxForm({
   destroyOnUnmount: false,
 })(SearchFormComponent);
 
+/**
+ * Search form component connected with Router and Redux
+ * 
+ * @export
+ * @see {@link module:components~SearchFormComponent}
+ * @const ConnectedSearchForm
+ * @extends {Component}
+ */
 export const ConnectedSearchForm = withRouter(
   connect(
     mapSearchFormStates,
@@ -49,6 +59,14 @@ const mapResultsListStates = state => ({
   detailItem: state.detailItem,
 });
 
+/**
+ * Search results component connected with Redux
+ * 
+ * @export
+ * @see {@link module:components~ResultsListComponent}
+ * @const ConnectedResultsList
+ * @extends {Component}
+ */
 export const ConnectedResultsList = connect(
   mapResultsListStates,
   { searchFilms, sortFilms, updateSortBy },
@@ -62,6 +80,14 @@ const mapDetailStates = state => ({
   detailItem: state.detailItem,
 });
 
+/**
+ * Film details component connected with Redux
+ * 
+ * @export
+ * @see {@link module:components~DetailComponent}
+ * @const ConnectedDetail
+ * @extends {Component}
+ */
 export const ConnectedDetail = withRouter(
   connect(
     mapDetailStates,

@@ -1,3 +1,5 @@
+/** @module helpers */
+
 import axios from 'axios';
 
 /**

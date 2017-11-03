@@ -1,3 +1,5 @@
+/** @module components */
+
 import React, { Component } from 'react';
 
 import ResultsItemComponent from '../results-item/index.jsx';

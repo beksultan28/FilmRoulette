@@ -15,7 +15,7 @@
     "bwt": "npm run build-with-test",
     "test": "node_modules/.bin/jest",
     "ts": "npm run test",
-    "docs": "./node_modules/.bin/jsdoc client -r -d docs",
+    "docs": "node_modules/.bin/jsdoc client -r -d docs",
     "d": "npm run docs"
   },
   "dependencies": {

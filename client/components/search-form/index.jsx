@@ -1,3 +1,5 @@
+/** @module components */
+
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import 'url-search-params-polyfill';
