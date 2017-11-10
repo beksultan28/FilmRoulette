@@ -84,5 +84,13 @@ module.exports = (env) => {
       staticFiles);
   }
 
+  common = merge(common, {
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(env),
+      }),
+    ],
+  });
+
   return common;
 };
