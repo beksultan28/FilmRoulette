@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
 
 import RootContainer from './containers/root.jsx';
 import store from './store';
+
 
 const render = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
         <Router>
-          <RootContainer/>
+          <RootContainer />
         </Router>
       </Provider>
     </AppContainer>,

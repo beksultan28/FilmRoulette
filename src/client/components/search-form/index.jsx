@@ -59,8 +59,9 @@ export default class SearchFormComponent extends Component {
    * @memberof SearchFormComponent
    */
   updateRequest() {
-    let searchQuery = window.location.pathname.split('/')[2];
-    let searchBy = new URLSearchParams(window.location.search).get('searchBy');
+    let searchQuery =/*  window ? window.location.pathname.split('/')[2] : */ '';
+    const search = /* window ? window.location.search : */ '';
+    let searchBy = new URLSearchParams(search).get('searchBy');
 
     searchQuery = searchQuery ? decodeURI(searchQuery) : '';
     searchBy = searchBy || 'movie';

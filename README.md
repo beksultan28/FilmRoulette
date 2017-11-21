@@ -22,7 +22,7 @@ $ cd FilmRoulette
 $ yarn
 ```
 
-### Running locally
+### Running local development server
 
 ```sh
 $ yarn start #to start the hot-reloading development server
@@ -45,6 +45,14 @@ $ yarn build #result will be generated to the 'build' folder
 $ yarn build-with-test #to run tests before the build
 ```
 
+### Starting production server
+**Note:** You must [build](#building) the project before starting production server
+
+```sh
+$ yarn start-server #this will start production server with server-side rendering
+$ open http://localhost:3000/
+```
+
 ### Generating documentation
 
 ```sh
@@ -59,6 +67,8 @@ $ yarn docs #result will be generated to the 'docs' folder
 * [Babel](https://babeljs.io/) - transpiling es6 and JSX to es5
 * [ESLint](https://eslint.org/) - linting JavaScript and JSX
 * [Jest](https://facebook.github.io/jest/) - testing
+* [JSDoc](http://usejsdoc.org/) - an API documentation generator for JavaScript
+* [Express](https://expressjs.com/) - web framework for production server with SSR
 
 ## License
 
