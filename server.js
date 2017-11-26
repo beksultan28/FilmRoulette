@@ -27,7 +27,7 @@ const outputErrors = (err, stats) => {
 
 console.log('Initializing server application...');
 
-const server = express(); // eslint-disable-line
+const server = express();
 server.use(express.static('build'));
 
 console.log('Compiling bundle...');

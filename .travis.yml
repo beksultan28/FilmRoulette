@@ -1,6 +1,3 @@
-env:
-  global:
-    - CC_TEST_REPORTER_ID=0ce2dc49865027861cbaaff064a255fa9f5fbb299a106378258103b0cedf35a8
 language: node_js
 sudo: false
 node_js:
@@ -21,3 +18,5 @@ script:
   - yarn test -- --coverage
 after_script:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+after_success:
+  - ./node_modules/.bin/surge --project ./build --domain film-roulette-bz.surge.sh/

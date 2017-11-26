@@ -65,6 +65,7 @@
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^15.6.1",
     "style-loader": "^0.18.2",
+    "surge": "^0.19.0",
     "url-loader": "^0.5.9",
     "webpack-dev-server": "^2.7.1"
   }
