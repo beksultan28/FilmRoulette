@@ -66,15 +66,12 @@ let common = {
       filename: 'index.html',
       inject: 'body',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/client/index.html',
-      filename: '200.html',
-      inject: 'body',
-    }),
   ],
 };
 
-module.exports = (env) => {
+module.exports = (args) => {
+  const env = args.NODE_ENV;
+  const deploy = args.deploy;
   if (env === 'development') {
     common = merge(
       hotLoader,
@@ -87,6 +84,19 @@ module.exports = (env) => {
     common = merge(
       common,
       staticFiles);
+  }
+
+  // Create additional 200 page for client-side routing on Surge
+  if (deploy === 'true') {
+    common = merge(common, {
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: './src/client/index.html',
+          filename: '200.html',
+          inject: 'body',
+        }),
+      ],
+    });
   }
 
   common = merge(common, {

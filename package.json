@@ -7,9 +7,10 @@
   "homepage": "https://github.com/beksultan28/FilmRoulette.git",
   "license": "MIT",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --env development",
-    "build": "node_modules/.bin/webpack --progress -p --env production",
+    "start": "node_modules/.bin/webpack-dev-server --env.NODE_ENV development",
+    "build": "node_modules/.bin/webpack --progress -p --env.NODE_ENV production",
     "build-with-test": "npm run test && npm run build",
+    "build-for-deploy": "npm run build -- --env.deploy true",
     "test": "node_modules/.bin/jest",
     "docs": "node_modules/.bin/jsdoc src -r -d docs",
     "start-server": "node ./server.js"
