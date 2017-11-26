@@ -66,6 +66,11 @@ let common = {
       filename: 'index.html',
       inject: 'body',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/client/index.html',
+      filename: '200.html',
+      inject: 'body',
+    }),
   ],
 };
 
