@@ -5,8 +5,7 @@ import React, { Component } from 'react';
 import ResultsItemComponent from '../results-item/index.jsx';
 import ResultsSortComponent from '../results-sort/index.jsx';
 
-// eslint-disable-next-line no-unused-vars
-import * as styles from './style.css';
+import './style.css';
 
 /**
  * Search results component

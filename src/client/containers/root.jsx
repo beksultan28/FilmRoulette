@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 import { withRouter, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
-// eslint-disable-next-line no-unused-vars
-import * as styles from '../style.css';
+import '../style.css';
 
 import SearchContainer from './search.jsx';
 import DetailContainer from './detail.jsx';

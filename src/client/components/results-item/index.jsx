@@ -3,8 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line no-unused-vars
-import * as styles from './style.css';
+import './style.css';
 
 /**
  * Search result item compenent

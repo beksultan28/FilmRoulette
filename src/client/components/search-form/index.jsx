@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import 'url-search-params-polyfill';
 
-// eslint-disable-next-line no-unused-vars
-import * as styles from './style.css';
+import './style.css';
 
 
 /**
