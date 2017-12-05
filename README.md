@@ -4,11 +4,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/619893fed814a7abebba/test_coverage)](https://codeclimate.com/github/beksultan28/FilmRoulette/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/619893fed814a7abebba/maintainability)](https://codeclimate.com/github/beksultan28/FilmRoulette/maintainability)
 
+![Simple SPA for searching Films and TV Shows on The Movie Database (TMDb)](./src/client/static/images/preview.png)
+
 Simple SPA for searching Films and TV Shows on [The Movie Database (TMDb)](https://www.themoviedb.org/).
-
-# ![Simple SPA for searching Films and TV Shows on The Movie Database (TMDb)](./src/client/static/images/screenshot.png)
-
-
 
 ## Getting Started
 
