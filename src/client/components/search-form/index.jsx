@@ -24,7 +24,7 @@ export default class SearchFormComponent extends Component {
     this.handleSearchBy = this.handleSearchBy.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     /**
      * Parse url and update states
      * This needed for the case when page is refreshed

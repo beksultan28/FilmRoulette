@@ -13,7 +13,7 @@ import './style.css';
  * @extends {Component}
  */
 export default class DetailComponent extends Component {
-  componentWillMount() {
+  componentDidMount() {
     /**
      * Parse url and get film
      */
