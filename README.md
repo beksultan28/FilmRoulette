@@ -6,7 +6,9 @@
 
 Simple SPA for searching Films and TV Shows on [The Movie Database (TMDb)](https://www.themoviedb.org/).
 
-![Simple SPA for searching Films and TV Shows on The Movie Database (TMDb)](./src/client/static/images/screenshot.png)
+# ![Simple SPA for searching Films and TV Shows on The Movie Database (TMDb)](./src/client/static/images/screenshot.png)
+
+
 
 ## Getting Started
 
