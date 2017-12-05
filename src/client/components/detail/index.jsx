@@ -88,10 +88,10 @@ export default class DetailComponent extends Component {
     return item ? (
       <div className="detail">
         <div className="row">
-          <div className="col-xs-4">
+          <div className="col-sm-4 col-xs-12 detail-img-container">
             <img src={`http://image.tmdb.org/t/p/w342${item.poster_path}`} alt="" className="detail-img" />
           </div>
-          <div className="col-xs-7">
+          <div className="col-sm-7 col-xs-12">
             <h2 className="detail-title">
               {item.title}
               &nbsp;<span className="badge">{item.vote_average} </span>

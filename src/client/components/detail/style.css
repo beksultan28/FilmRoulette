@@ -40,3 +40,10 @@
 .detail-extra a {
 	color: inherit;
 }
+
+@media (max-width: 767px) {
+	.detail-img-container {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}

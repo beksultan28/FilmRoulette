@@ -60,7 +60,7 @@ export default class ResultsListComponent extends Component {
           <div className="results-list">
             <div className="row">
               {this.props.searchResults.map(el =>
-                <div key={el.id} className="col-xs-4">
+                <div key={el.id} className="col-md-4 col-sm-6 col-xs-12">
                   <ResultsItemComponent
                     item={el}
                     searchBy={this.props.searchBy}

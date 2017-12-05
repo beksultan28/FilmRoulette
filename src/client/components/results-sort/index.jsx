@@ -36,12 +36,12 @@ export default class ResultsSortComponent extends Component {
       <div className="results-sort">
         <div className="container wrapper">
           <div className="row">
-            <div className="col-xs-6 results-sort-title">
+            <div className="col-xs-12 col-sm-6 results-sort-title">
               { this.props.title }
             </div>
             {this.props.onSort ? (
-              <div className="col-xs-6 text-right">
-                Sort by
+              <div className="col-xs-12 col-sm-6 sort-by-block">
+                Sort by:
                 <a href="#!"
                   onClick={this.handleSortByChange}
                   data-value="release_date"

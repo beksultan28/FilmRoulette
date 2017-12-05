@@ -10,14 +10,19 @@ a.result-content {
 
 .result-img {
 	width: 100%;
-	height: 470px;
+	height: 0;
+	padding-bottom: 150%;
 	background: #ccc;
+	position: relative;
 }
 
 .result-img img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .result-title {
@@ -36,4 +41,25 @@ a.result-content {
 	position: absolute;
 	right: 0;
 	top: 1rem;
+}
+
+.sort-by-block {
+	text-align: right;
+}
+
+@media (max-width: 1024px) {
+	.results-list {
+		margin: 0!important;
+	}
+}
+
+@media (max-width: 767px) {
+	.sort-by-block {
+		text-align: left;
+	}
+
+	.result-item {
+		padding: 0!important;
+		padding-bottom: 20px!important;
+	}
 }
