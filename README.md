@@ -6,6 +6,8 @@
 
 Simple SPA for searching Films and TV Shows on [The Movie Database (TMDb)](https://www.themoviedb.org/).
 
+![Simple SPA for searching Films and TV Shows on The Movie Database (TMDb)](./src/client/static/images/screenshot.png)
+
 ## Getting Started
 
 ### Prerequisites
@@ -22,6 +24,21 @@ $ cd FilmRoulette
 $ yarn
 ```
 
+### Building
+
+```sh
+$ yarn build #result will be generated to the 'build' folder
+$ yarn build-with-test #to run tests before the build
+```
+
+### Starting production server
+**Note:** You must [build](#building) the project before starting production server
+
+```sh
+$ yarn start-server #this will start production server with server-side rendering
+$ open http://localhost:3000/
+```
+
 ### Running local development server
 
 ```sh
@@ -36,21 +53,6 @@ open http://localhost:3030/
 $ yarn test #to run all the tests
 $ yarn test -- folder_name/* #to run the tests in specific directory
 $ yarn test -- --coverage #to run the tests with coverage information. Result will be generated to the 'coverage' folder
-```
-
-### Building
-
-```sh
-$ yarn build #result will be generated to the 'build' folder
-$ yarn build-with-test #to run tests before the build
-```
-
-### Starting production server
-**Note:** You must [build](#building) the project before starting production server
-
-```sh
-$ yarn start-server #this will start production server with server-side rendering
-$ open http://localhost:3000/
 ```
 
 ### Generating documentation
